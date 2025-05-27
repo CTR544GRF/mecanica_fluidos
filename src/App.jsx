@@ -181,8 +181,8 @@ function App() {
             </h4>
             <p>
             Simulación 1: Volumen de gas y líquido en un recipiente
-            En esta simulación se observa cómo se distribuyen el gas y el líquido dentro de un recipiente cerrado a medida que varía su tamaño. A diferencia de otros escenarios, en esta actividad no se modifican variables como la presión o la temperatura; únicamente se altera el volumen total del recipiente. El objetivo es visualizar cómo el líquido, al ser prácticamente incompresible, mantiene su volumen constante, mientras que el gas, al ser compresible, se adapta al espacio restante. Esta simulación permite comprender de manera intuitiva cómo el gas se expande o se comprime según el espacio disponible, mientras que el líquido conserva su forma y volumen independientemente del tamaño del recipiente.
-            </p>
+            Esta simulación muestra cómo se distribuyen gas y líquido en un recipiente cerrado cuando varía su tamaño. El líquido mantiene su volumen constante porque es incompresible, mientras que el gas, siendo compresible, ocupa el espacio restante. No se modifican presión ni temperatura, solo el volumen total.
+           </p>
           </div>
           
           <div className="target">
@@ -201,8 +201,8 @@ function App() {
                   </a>
             </h4>
             <p>
-            Simulación 2: Cambios en movimiento de partículas bajo cambios en temperatura y volumen
-            La simulación muestra dos recipientes: uno con agua y otro con gas. El agua, de color azul, se mantiene en la parte inferior del recipiente, mientras que el gas, representado por partículas verdes, se dispersa por todo el volumen disponible. A la derecha se encuentran controles para ajustar la altura del agua, el tamaño del gas, la temperatura de ambos y el zoom. La simulación permite comparar cómo se comportan un líquido y un gas en un espacio cerrado.
+            Simulación 2: Movimiento de partículas con cambios de temperatura y volumen
+Se comparan dos recipientes, uno con agua y otro con gas, mostrando cómo se comportan sus partículas. Se pueden ajustar la altura del agua, el volumen del gas y la temperatura, observando las diferencias entre líquido y gas en un espacio cerrado.
             </p>
           </div>
           
@@ -222,8 +222,9 @@ function App() {
                   </a>
             </h4>
             <p>
+            
             Simulación 3: Viscosidad bajo cambios de temperatura
-            La simulación muestra cómo la viscosidad del aceite y del agua varía con la temperatura. Al aumentar el calor, ambos líquidos se vuelven más fluidos, ya que las partículas se mueven más y hay menos resistencia al flujo. El aceite muestra un cambio más notorio que el agua, porque es más viscoso a temperatura ambiente. Al enfriarse, ambos se espesan, pero el aceite vuelve a resistir más el movimiento que el agua.
+Se observa cómo la viscosidad del aceite y del agua cambia con la temperatura. Al calentarse, ambos líquidos se vuelven más fluidos; el aceite presenta un cambio más marcado porque es más viscoso a temperatura ambiente. Al enfriarse, la viscosidad aumenta en ambos, pero el aceite sigue siendo más resistente al flujo.
             </p>
           </div>
         
