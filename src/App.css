@@ -1,15 +1,16 @@
 body, html, #root {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Hedvig Letters Serif', serif;
   height: 100%;
+  width: 100%;
 }
 
-.landing {
+.one_view {
   background-image: url('./assets/portada.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 120vh;
   color: #111;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,6 @@ body, html, #root {
 }
 
 .nav-links li a {
-  font-family: 'Hedvig Letters Serif', serif;
   text-decoration: none;
   color: #000;
   font-weight: bold;
@@ -67,14 +67,82 @@ body, html, #root {
 
 .footer {
   background-color: #0B0723;
-  color: white;
+  color: #00FFFF;
+  text-shadow: 0 0 3px #00FFFF;
   padding: 1rem;
   font-size: 0.9rem;
   text-align: center;
+  border-radius: 50px;
+  margin: 20px;
 }
 .footer p{
-  font-family: 'Hedvig Letters Serif', serif;
   width: 80%;
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto;
+}
+
+.second_part{
+  background-color: #0B0723;
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  display: flex;
+}
+
+.second_part img{
+  width: 40%;
+  height: 70%;
+  margin: auto 3rem;
+}
+.import_text{
+  width: 40%;
+  margin: auto;
+}
+.import_text h2{
+  font-family: 'Graduate', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+.simulation-select {
+ 
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;              
+  background: transparent;    
+  border: none;
+  padding: 0;                 
+  margin: 0;                  
+  cursor: pointer;
+
+  /* Oculta la flechita nativa en la mayoría de navegadores */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Para dejar hueco a la flecha personalizada */
+  padding-right: 1.5em;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%207L0%200h12L6%207z%22%20fill%3D%22%23000000%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0.75em auto;
+}
+
+/* Mantén la altura y alineación con los links */
+.navbar .nav-links li .simulation-select {
+  height: 1.5em;             
+  line-height: 1.5em;
+}
+
+/* Hover igual que en .nav-links li a:hover */
+.navbar .nav-links li .simulation-select:hover {
+  color: #2196F3;             
+}
+
+/* Focus: para accesibilidad, marco sutil */
+.navbar .nav-links li .simulation-select:focus {
+  outline: 2px solid rgba(33, 150, 243, 0.5);
+  outline-offset: 2px;
 }
