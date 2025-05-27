@@ -274,10 +274,10 @@ const ViscositySimulation = ({ onBack }) => {
 
         <div style={{ marginTop: "10px" }}>
           <p style={{ margin: "5px 0" }}>
-            <strong style={{ color: "#ffcc00" }}>Aceite:</strong> Alta viscosidad que disminuye notablemente con la temperatura.
+            <strong style={{ color: "#ffcc00" }}>Aceite:</strong> Alta viscosidad, que disminuye notablemente con la temperatura.
           </p>
           <p style={{ margin: "5px 0" }}>
-            <strong style={{ color: "#0066cc" }}>Agua:</strong> Baja viscosidad que cambia menos con la temperatura.
+            <strong style={{ color: "#0066cc" }}>Agua:</strong> Baja viscosidad, que cambia menos con la temperatura.
           </p>
         </div>
       </div>

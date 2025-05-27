@@ -10,20 +10,29 @@ body, html, #root {
   background-image: url('./assets/portada.jpg');
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  height: 100vh;
   color: #111;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 80px;
+}
+.landing{
+  background-color: white;
 }
 
 .navbar {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 5px 1rem ;
   background-color: white;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #111;
+  z-index: 1000;
 }
 
 
@@ -85,23 +94,30 @@ body, html, #root {
   background-color: #0B0723;
   background-size: cover;
   background-position: center;
-  height: 120vh;
+  height: auto;
   display: flex;
+  margin: 60px;
+  border-radius: 50px;
+  flex-direction: column;
 }
 
 .second_part img{
   width: 40%;
   height: 70%;
-  margin: auto 3rem;
 }
 .import_text{
-  width: 40%;
-  margin: auto;
+  width: 80%;
+  display: flex;
+  gap: 5rem;
+  margin: 0 auto;
 }
-.import_text h2{
+.second_part h2{
   font-family: 'Graduate', cursive;
   font-size: 2.5rem;
   text-align: center;
+  width: 70%;
+  align-items: center;
+  margin: 2rem auto;
 }
 
 
@@ -145,4 +161,38 @@ body, html, #root {
 .navbar .nav-links li .simulation-select:focus {
   outline: 2px solid rgba(33, 150, 243, 0.5);
   outline-offset: 2px;
+}
+
+
+.textbox{
+  width: 80%;
+  margin: auto;
+}
+
+.target{
+  background-color: #0B0723;
+  width: 30%;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.targets_simulation{
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: space-around;
+}
+.target h4{
+  text-align: center;
+}
+.target p{
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.target img{
+  width: 90%;
+  margin: auto;
 }
