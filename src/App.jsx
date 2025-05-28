@@ -1,48 +1,91 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState } from "react"; 
+// Importa React y el hook useState desde la librería de React.
+// useState permite manejar estado dentro de componentes funcionales.
+// Documentación oficial: https://react.dev/reference/react/useState
+
+import "./App.css"; 
+// Importa estilos desde un archivo CSS externo.
+
 import logo from "./assets/logotipo.png";
 import logoU from "./assets/logo_uni.png";
 import hidraulica from "./assets/hidraulica.png";
 import target_one from "./assets/taget_one.png";
 import target_dos from "./assets/target_dos.png";
 import target_tres from "./assets/target_tres.png";
+// Importa imágenes desde la carpeta assets para usarlas como recursos visuales.
 
 import FluidSimulation from "./components/FluidSimulation";
 import ThermalPhysicalSimulation from "./components/ThermalPhysicalSimulation";
 import ViscositySimulation from "./components/ViscositySimulation";
+// Importa componentes de simulación definidos en otros archivos para ser usados condicionalmente.
 
 function App() {
-  const [showSimulation, setShowSimulation] = useState(false);
-  const [simType, setSimType] = useState("fluid");
+  const [showSimulation, setShowSimulation] = useState(false); 
+  // Hook useState: se declara una variable de estado llamada showSimulation y su función actualizadora.
+  // Inicialmente está en 'false', lo que significa que no se muestra ninguna simulación aún.
+
+  const [simType, setSimType] = useState("fluid"); 
+  // Hook useState: se guarda el tipo de simulación seleccionada (fluid, thermal o viscosity).
+  // Valor inicial: "fluid".
 
   return (
-    <div className="landing">
-      {showSimulation ? (
+    <div className="landing"> 
+    {/* Div principal con una clase CSS para aplicar estilos de layout */}
+
+      {showSimulation ? ( 
+        // Renderizado condicional usando operador ternario (documentado en React como patrón común).
+        // Si showSimulation es true, se muestra la simulación según el tipo seleccionado.
+        // Documentación oficial: https://react.dev/learn/conditional-rendering
+
         simType === "fluid" ? (
           <FluidSimulation onBack={() => setShowSimulation(false)} />
+          // Si simType es "fluid", renderiza el componente FluidSimulation.
+          // Le pasa una prop llamada onBack que cambia el estado a false (regresar a pantalla principal).
+
         ) : simType === "thermal" ? (
           <ThermalPhysicalSimulation onBack={() => setShowSimulation(false)} />
+          // Si simType es "thermal", renderiza ThermalPhysicalSimulation con la misma lógica.
+
         ) : (
           <ViscositySimulation onBack={() => setShowSimulation(false)} />
+          // Caso por defecto: si no es ninguno de los anteriores, renderiza ViscositySimulation.
         )
+
       ) : (
-        <>
-          <div className="one_view">
-            <nav className="navbar">
-              <div className="logo">
-                <img src={logo} alt="Logo" />
-                <img src={logoU} alt="Logo Universidad" className="logoU" />
+        <> 
+          {/* Fragmento vacío <> </> para encapsular múltiples elementos sin un div adicional */}
+          {/* Documentación oficial: https://react.dev/reference/react/Fragment */}
+
+          <div className="one_view"> 
+            {/* Contenedor visual principal */}
+
+            <nav className="navbar"> 
+              {/* Barra de navegación superior */}
+
+              <div className="logo"> 
+                {/* Contenedor para los logotipos */}
+                <img src={logo} alt="Logo" /> 
+                {/* Imagen principal del proyecto */}
+                <img src={logoU} alt="Logo Universidad" className="logoU" /> 
+                {/* Logo de la universidad con una clase CSS personalizada */}
               </div>
-              < ul className="nav-links">
+
+              <ul className="nav-links">
+                {/* Lista de navegación */}
+                
                 <li>
                   <a 
                     href="#fluidos" 
                     className="simulation-link"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setSimType("fluid");
-                      setShowSimulation(true);
+                      e.preventDefault(); 
+                      // Previene el comportamiento por defecto del anchor (navegar).
+                      setSimType("fluid"); 
+                      // Actualiza el tipo de simulación.
+                      setShowSimulation(true); 
+                      // Muestra el componente correspondiente.
                     }}
+                    // Manejo de eventos en React: https://react.dev/learn/responding-to-events
                   >
                     Simulación Fluidos
                   </a>
@@ -57,6 +100,7 @@ function App() {
                       setSimType("thermal");
                       setShowSimulation(true);
                     }}
+                    // Manejo de eventos en React: https://react.dev/learn/responding-to-events
                   >
                     Propiedades Físicas/Térmicas
                   </a>
@@ -71,6 +115,7 @@ function App() {
                       setSimType("viscosity");
                       setShowSimulation(true);
                     }}
+                    // Manejo de eventos en React: https://react.dev/learn/responding-to-events
                   >
                     Simulación Viscosidad
                   </a>
@@ -78,15 +123,16 @@ function App() {
               </ul>
             </nav>
 
-            <header className="hero">
-              <h1>
+            <header className="hero"> {/* Contenedor con clase de nombre hero*/}
+              
+              <h1> {/* Titulo en tamaño H1 */}
                 Explora la Mecánica de Fluidos en 3D: Aprende, Experimenta y
                 Simula
               </h1>
             </header>
 
-            <footer className="footer">
-              <p>
+            <footer className="footer"> {/* Contenedor utilisado para pie de pagina */}
+              <p> {/* Etiqueta para poner un parrafo */}
                 "Bienvenido al laboratorio virtual de Mecánica de Fluidos, donde
                 la teoría cobra vida a través de simulaciones 3D interactivas.
                 Explora conceptos clave, experimenta con fluidos en diferentes
@@ -101,7 +147,7 @@ function App() {
             <h2>Importancia de la Mecanica de Fluidos en Ingeniería</h2>
             
             <div className="import_text">
-              <img src={hidraulica} alt="Sistema Hidráulico" />
+              <img src={hidraulica} alt="Sistema Hidráulico" /> {/* Etiqueta que llama imagen que se importo al inicio del codigo */}
               <p>
                 La mecánica de fluidos es clave en la ingeniería mecatrónica
                 porque permite diseñar y optimizar sistemas que utilizan
